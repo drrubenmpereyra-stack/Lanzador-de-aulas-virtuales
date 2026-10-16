@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Lanzamiento - Aulas Virtuales</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-slate-950">
+
+    <!-- Encabezado / Hero Section -->
+    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="space-y-4 max-w-xl text-center lg:text-left">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                    <i class="fa-solid fa-graduation-cap"></i> Propuestas de Capacitación
+                </span>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                    Panel de lanzamiento de <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">aulas virtuales de propuestas de capacitación</span>
+                </h1>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Acceso centralizado a los entornos virtuales de aprendizaje y espacios académicos activos.
+                </p>
+                <div class="pt-2 flex justify-center lg:justify-start">
+                    <a href="#apps" class="px-6 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold transition-all shadow-lg shadow-cyan-500/20 flex items-center gap-2 text-sm">
+                        <i class="fa-solid fa-rocket"></i> Explorar Aulas
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Imagen Central del Encéfalo (Proporción armonizada) -->
+            <div class="relative group w-full max-w-sm sm:max-w-md">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl blur-lg opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                <div class="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl aspect-video sm:aspect-[16/10]">
+                    <img src="watermarked_img_18156393488549361597.jpg" alt="Encéfalo y redes neuronales" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Listado de Aulas Virtuales -->
+    <main id="apps" class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 flex-grow w-full">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4 border-b border-slate-900 pb-4">
+            <div>
+                <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">Aulas Disponibles</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Selecciona una propuesta para ingresar de inmediato.</p>
+            </div>
+            <!-- Barra de Búsqueda -->
+            <div class="w-full sm:w-72">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500 text-sm">
+                        <i class="fa-solid fa-search"></i>
+                    </span>
+                    <input type="text" id="searchApp" placeholder="Buscar aula..." class="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors">
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Armonizado con tarjetas de dimensiones idénticas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="appList">
+            
+            <!-- Tarjeta 1: Clínica de la Convergencia -->
+            <div class="app-card bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                <div>
+                    <!-- Contenedor de imagen estrictamente acotado para evitar desfasajes -->
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800/60 flex items-center justify-center p-2">
+                        <img src="logo_aula_clinica.jpg" alt="Logo Aula Clínica" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Aula Activa</span>
+                        <span class="text-[11px] text-slate-500"><i class="fa-brands fa-github"></i> GitHub Pages</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">Clínica de la Convergencia</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Espacio virtual de capacitación clínica y convergencia teórica.</p>
+                </div>
+                <div class="pt-4 mt-5 border-t border-slate-800/60">
+                    <a href="https://drrubenmpereyra-stack.github.io/class-virtual-clinica-de-la-convergencia/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm shadow-cyan-500/10">
+                        Abrir Aplicación <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Más allá del Prisma -->
+            <div class="app-card bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800/60 flex items-center justify-center p-2">
+                        <img src="logotipo_prisma.jpg" alt="Logotipo Prisma" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Aula 2027</span>
+                        <span class="text-[11px] text-slate-500"><i class="fa-brands fa-github"></i> GitHub Pages</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">Más allá del Prisma</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Aula virtual orientada a las nuevas propuestas de formación para el ciclo 2027.</p>
+                </div>
+                <div class="pt-4 mt-5 border-t border-slate-800/60">
+                    <a href="https://drrubenmpereyra-stack.github.io/Mas-alla-del-Prisma-Aula-Virtual-2027/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm shadow-cyan-500/10">
+                        Abrir Aplicación <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Aromoterapia -->
+            <div class="app-card bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between group shadow-lg">
+                <div>
+                    <div class="w-full h-44 rounded-xl overflow-hidden mb-4 bg-slate-950 border border-slate-800/60 flex items-center justify-center p-2">
+                        <img src="logotipo_aromoterapia.jpg" alt="Logotipo Aromoterapia" class="w-full h-full object-contain rounded-lg group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">Jornada</span>
+                        <span class="text-[11px] text-slate-500"><i class="fa-brands fa-github"></i> GitHub Pages</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">Jornada Aromaterapia</h3>
+                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">Plataforma de capacitación especializada en aromaterapia y convergencia.</p>
+                </div>
+                <div class="pt-4 mt-5 border-t border-slate-800/60">
+                    <a href="https://drrubenmpereyra-stack.github.io/Jornada-aromoterapia-convergencia/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm shadow-cyan-500/10">
+                        Abrir Aplicación <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="border-t border-slate-800 bg-slate-900/50 py-6 text-center text-xs text-slate-500">
+        <p>© 2026 Panel de Lanzamiento - Aulas Virtuales de Capacitación.</p>
+    </footer>
+
+    <!-- Script de búsqueda dinámica -->
+    <script>
+        const searchInput = document.getElementById('searchApp');
+        const appCards = document.querySelectorAll('.app-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            appCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                if (title.includes(term) || description.includes(term)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
